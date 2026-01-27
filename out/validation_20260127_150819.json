@@ -1,0 +1,11 @@
+{
+  "T1": {
+    "BAD_ORDERS": 0
+  },
+  "T2": {
+    "ORDERS_WITHOUT_ITEMS": 0
+  },
+  "T3": {
+    "DUPLICATE_EMAILS": 0
+  }
+}

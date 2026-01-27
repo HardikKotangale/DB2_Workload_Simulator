@@ -1,0 +1,7 @@
+{
+  "run_id": "20260127_190509",
+  "ts_utc": "2026-01-27T19:05:09.605705Z",
+  "db2_current_timestamp": "2026-01-27T19:05:09.613382",
+  "db2_ping": "OK",
+  "instance_info_error": "[IBM][CLI Driver][DB2/LINUXX8664] SQL0206N  \"PLATFORM\" is not valid in the context where it is used.  SQLSTATE=42703 SQLCODE=-206"
+}

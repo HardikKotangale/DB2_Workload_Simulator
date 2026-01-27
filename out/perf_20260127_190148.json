@@ -1,0 +1,17 @@
+{
+  "run_id": "20260127_190148",
+  "ts_utc": "2026-01-27T19:01:49.485720Z",
+  "benchmark": "R1_orders_by_customer",
+  "before_indexes": {
+    "samples": 25,
+    "p50_ms": 0.502,
+    "p95_ms": 1.149,
+    "avg_ms": 1.548
+  },
+  "after_indexes": {
+    "samples": 25,
+    "p50_ms": 0.443,
+    "p95_ms": 0.664,
+    "avg_ms": 0.568
+  }
+}
