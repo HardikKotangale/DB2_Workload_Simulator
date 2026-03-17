@@ -1,7 +1,7 @@
 services:
   db2:
     image: icr.io/db2_community/db2:latest
-    platform: linux/amd64   
+    platform: linux/amd64
     container_name: db2-community
     privileged: true
     environment:
@@ -11,9 +11,9 @@ services:
       DBNAME: SAMPLEDB
       BLU: "false"
       ENABLE_ORACLE_COMPATIBILITY: "false"
-      TO_CREATE_SAMPLEDB: "false"
+      TO_CREATE_SAMPLEDB: "true"
       REPODB: "false"
-      IS_OSXFS: "false"
+      IS_OSXFS: "true"
     ports:
       - "50000:50000"
     volumes:
@@ -21,8 +21,44 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "su - db2inst1 -c 'db2 connect to SAMPLEDB >/dev/null 2>&1 || exit 1'"]
       interval: 20s
-      timeout: 10s
-      retries: 20
+      timeout: 15s
+      retries: 30
+      start_period: 360s
+
+  backend:
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: db2-simulator-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DB2_HOST: db2
+      SQLITE_DIR: /app/data
+    volumes:
+      - simulatordb:/app/data
+      - ./backend:/app
+      - ./schema:/app/../schema
+      - ./queries:/app/../queries
+      - ./tests:/app/../tests
+    depends_on:
+      - db2
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: db2-simulator-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
 
 volumes:
   db2data:
+  simulatordb:

@@ -1,0 +1,10 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.36
+aiosqlite==0.20.0
+greenlet>=3.0.0
+apscheduler==3.10.4
+reportlab==4.2.5
+python-dotenv==1.0.1
+ibm-db==3.2.8
+pydantic-settings==2.5.2

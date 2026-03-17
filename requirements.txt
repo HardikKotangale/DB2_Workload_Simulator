@@ -1,2 +1,2 @@
-ibm-db==3.2.4
+ibm-db==3.2.8
 python-dotenv==1.0.1
