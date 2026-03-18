@@ -8,43 +8,43 @@ A full-stack observability platform for **IBM DB2**. Trigger mixed read/write wo
 
 > **Landing Page** — product overview with top navbar
 
-<!-- TODO: Add screenshot → docs/screenshots/landing.png -->
-![Landing Page](docs/screenshots/landing.png)
+<!-- TODO: Add screenshot → outputs/landing.png -->
+![Landing Page](outputs/landing.png)
 
 > **Dashboard** — DB2 connection status, aggregate stats, recent runs, historical trend chart
 
-<!-- TODO: Add screenshot → docs/screenshots/dashboard.png -->
-![Dashboard](docs/screenshots/dashboard.png)
+<!-- TODO: Add screenshot → outputs/dashboard.png -->
+![Dashboard](outputs/dashboard.png)
 
 > **New Run** — scenario picker, read/write ratio slider, options, delay controls
 
-<!-- TODO: Add screenshot → docs/screenshots/new_run.png -->
-![New Run](docs/screenshots/new_run.png)
+<!-- TODO: Add screenshot → outputs/new_run.png -->
+![New Run](outputs/new_run.png)
 
 > **Run Details (Live)** — real-time progress bar and WebSocket log stream while a run is active
 
-<!-- TODO: Add screenshot → docs/screenshots/run_details_live.png -->
-![Run Details Live](docs/screenshots/run_details_live.png)
+<!-- TODO: Add screenshot → outputs/run_details_live.png -->
+![Run Details Live](outputs/run_details_live.png)
 
 > **Run Details (Completed)** — performance charts, throughput, read/write donut, error rate, validation table
 
-<!-- TODO: Add screenshot → docs/screenshots/run_details_completed.png -->
-![Run Details Completed](docs/screenshots/run_details_completed.png)
+<!-- TODO: Add screenshot → outputs/run_details_completed.png -->
+![Run Details Completed](outputs/run_details_completed.png)
 
 > **Run Comparison** — side-by-side metric diff table and grouped bar chart for two runs
 
-<!-- TODO: Add screenshot → docs/screenshots/run_comparison.png -->
-![Run Comparison](docs/screenshots/run_comparison.png)
+<!-- TODO: Add screenshot → outputs/run_comparison.png -->
+![Run Comparison](outputs/run_comparison.png)
 
 > **Run History** — searchable/filterable table of all runs with per-row and bulk delete
 
-<!-- TODO: Add screenshot → docs/screenshots/history.png -->
-![History](docs/screenshots/history.png)
+<!-- TODO: Add screenshot → outputs/history.png -->
+![History](outputs/history.png)
 
 > **Schedules** — cron schedule CRUD with human-readable descriptions and time-remaining countdown
 
-<!-- TODO: Add screenshot → docs/screenshots/schedules.png -->
-![Schedules](docs/screenshots/schedules.png)
+<!-- TODO: Add screenshot → outputs/schedules.png -->
+![Schedules](outputs/schedules.png)
 
 ---
 
@@ -207,14 +207,7 @@ DB2_Workload_Simulator/
 - ~6 GB free RAM (DB2 requires ~4 GB)
 - macOS or Linux recommended (`linux/amd64` platform emulation required on Apple Silicon)
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/DB2_Workload_Simulator.git
-cd DB2_Workload_Simulator
-```
-
-### 2. Create your `.env` file
+### 1. Create your `.env` file
 
 ```bash
 cp .env.example .env
@@ -232,7 +225,7 @@ DB2_PASSWORD=Passw0rd123!
 
 > `DB2_HOST=db2` is the Docker Compose service name — leave as-is when running via Compose.
 
-### 3. Start all services
+### 2. Start all services
 
 ```bash
 docker compose up -d
@@ -250,7 +243,7 @@ Wait until the logs show:
 (*) Setup has completed.
 ```
 
-### 4. Open the app
+### 3. Open the app
 
 | URL | Description |
 |---|---|
@@ -421,7 +414,3 @@ python workloads/run_workload.py --scenario regression --inject-defect --apply-f
 5. Open a pull request
 
 ---
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
