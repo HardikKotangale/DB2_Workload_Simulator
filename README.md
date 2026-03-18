@@ -21,11 +21,6 @@ A full-stack observability platform for **IBM DB2**. Trigger mixed read/write wo
 <!-- TODO: Add screenshot → outputs/new_run.png -->
 ![New Run](outputs/new_run.png)
 
-> **Run Details (Live)** — real-time progress bar and WebSocket log stream while a run is active
-
-<!-- TODO: Add screenshot → outputs/run_details_live.png -->
-![Run Details Live](outputs/run_details_live.png)
-
 > **Run Details (Completed)** — performance charts, throughput, read/write donut, error rate, validation table
 
 <!-- TODO: Add screenshot → outputs/run_details_completed.png -->
